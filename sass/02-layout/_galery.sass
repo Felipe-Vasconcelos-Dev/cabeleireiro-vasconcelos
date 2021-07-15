@@ -1,0 +1,49 @@
+@use "../01-base/_base-mixins"
+
+.galery
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    ul
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        width: 80%
+        margin: 50px 0
+
+        li
+            width: 300px
+            height: 300px
+            margin: 5px
+
+            background-color: #fff
+
+            &:nth-child(1)
+                @include base-mixins.galery("../img/foto9.jpg")
+            &:nth-child(2)
+                @include base-mixins.galery("../img/foto3.png")
+            &:nth-child(3)
+                @include base-mixins.galery("../img/foto4.png")
+            &:nth-child(4)
+                @include base-mixins.galery("../img/foto5.png")
+            &:nth-child(5)
+                @include base-mixins.galery("../img/foto6.png")
+            &:nth-child(6)
+                @include base-mixins.galery("../img/foto7.png")
+            .cover
+                width: 100%
+                height: 100%
+                background-color: transparent
+                transition: .3s
+
+                @include base-mixins.align-content
+
+                p
+                    color: transparent
+                    text-align: center
+                &:hover
+                    background-color: rgba(0,0,0,.3)
+                    p
+                        color: #fff

@@ -1,0 +1,17 @@
+@mixin galery($f)
+
+    background-image: url($f)
+    background-size: cover
+    height: 300px
+
+    @content
+@mixin align-content
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 30px
+@mixin imagem($img)
+    background-image: url($img)
+    background-size: cover
+    background-repeat: no-repeat
+    height: 700px
